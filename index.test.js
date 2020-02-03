@@ -1,4 +1,4 @@
-xdescribe("getAllElementsButNth", function() {
+describe("getAllElementsButNth", function() {
   it("should return an array", function() {
     expect(Array.isArray(getAllElementsButNth([4, 5, 6], 2))).toBe(true);
   });
@@ -18,9 +18,7 @@ xdescribe("getAllElementsButNth", function() {
 
 xdescribe("getElementsThatEqual10AtProperty", function() {
   it("should return an array containing all the elements that equal 10 in the array located at key", function() {
-    var obj = {
-      array: [10, 20, 40]
-    };
+    var obj = { array: [10, 20, 40] };
     expect(getElementsThatEqual10AtProperty(obj, "array")).toEqual([10]);
   });
   it("should return an empty array if the array has no elements that equal 10", function() {
@@ -52,36 +50,18 @@ xdescribe("getElementsThatEqual10AtProperty", function() {
 xdescribe("select", function() {
   it("should return an object", function() {
     var keys = ["a", "c", "e"];
-    var obj = {
-      a: 1,
-      b: 2,
-      c: 3,
-      d: 4
-    };
+    var obj = { a: 1, b: 2, c: 3, d: 4 };
     expect(typeof select(keys, obj)).toBe("object");
   });
   it("should return an object with properties in from the passed in object whose keys are present in the given function", function() {
     var keys = ["a", "c", "e"];
-    var obj = {
-      a: 1,
-      b: 2,
-      c: 3,
-      d: 4
-    };
-    var result = {
-      a: 1,
-      c: 3
-    };
+    var obj = { a: 1, b: 2, c: 3, d: 4 };
+    var result = { a: 1, c: 3 };
     expect(select(keys, obj)).toEqual(result);
   });
   it("should not modify the passed in object", function() {
     var keys = ["a", "c", "e"];
-    var obj = {
-      a: 1,
-      b: 2,
-      c: 3,
-      d: 4
-    };
+    var obj = { a: 1, b: 2, c: 3, d: 4 };
     select(keys, obj);
     expect(Object.keys(obj).length).toEqual(4);
   });
@@ -760,13 +740,28 @@ xdescribe("findShortestWordAmongMixedElements", function() {
 
 xdescribe("findSmallestNumberAmongMixedElements", function() {
   it("should return a number", function() {
-    expect(typeof findSmallestNumberAmongMixedElements([3, 5, 3, 1])).toBe("number");
+    expect(typeof findSmallestNumberAmongMixedElements([3, 5, 3, 1])).toBe(
+      "number"
+    );
   });
   it("should return the smallest element in an array", function() {
-    expect(findSmallestNumberAmongMixedElements([3, "word", 5, "up", 3, 1])).toBe(1);
+    expect(
+      findSmallestNumberAmongMixedElements([3, "word", 5, "up", 3, 1])
+    ).toBe(1);
   });
   it("should return the smallest element in an array when there are ties", function() {
-    expect(findSmallestNumberAmongMixedElements(["word", 3, 1, 3, "wordy", "up", 1, 5])).toBe(1);
+    expect(
+      findSmallestNumberAmongMixedElements([
+        "word",
+        3,
+        1,
+        3,
+        "wordy",
+        "up",
+        1,
+        5
+      ])
+    ).toBe(1);
   });
   it("should return the smallest element in an array when they are all negative", function() {
     expect(findSmallestNumberAmongMixedElements([-1, -5, "word", -3])).toBe(-5);
@@ -853,5 +848,3 @@ xdescribe("findShortestOfThreeWords", function() {
     expect(findShortestOfThreeWords("these", "apple", "words")).toBe("these");
   });
 });
-
-
