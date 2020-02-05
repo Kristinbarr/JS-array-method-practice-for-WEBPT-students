@@ -1,16 +1,12 @@
 {
-  "name": "JS-Practice-for-webpt14",
+  "name": "js-practice-for-webpt14",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jasmine"
-  },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
+  "scripts": {
+    "test": "http-server -s -f /index.html  -o index.html"
+  },
   "dependencies": {},
   "devDependencies": {
-    "jasmine": "^3.5.0"
+    "http-server": "^0.12.1"
   }
 }

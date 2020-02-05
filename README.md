@@ -7,17 +7,15 @@ Explore [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 These questions are selected from a set of exercises from a free repl.it classroom by [devmakers](https://repl.it/@devmakers).
 
 To run the tests:
-- inside of the root folder, run command `npm i` to install node packages
-- open `index.js` to find the javascript functions to complete
-- instructions are found inside each function
-- open `index.html` in a browser
-- open `index.test.js` and remove the `x` from each test suite you want to run
+
+- Inside of the root folder, run command `npm install` to install node packages
+- Open `index.js` to find the javascript functions to complete
+- Instructions are found inside each function
+- Run `npm run test` to automatically open `index.html` in a browser
+  - After completing a function or enabling a new test, refresh the page for the test to run again
+- Open `index.test.js` and remove the `x` from each test suite you want to run
   - `xdescribe` (inactive) ---> `describe` (active)
-  - the first test `getAllElementsButNth` is already active for you as an example
-- there are multiple unit tests testing edge cases and other expectations for each function to be completed
-- active tests will be red until you complete the function
-- once you fulfill the requirements for the tests, you will see green dots, hooray!
-
-
-
-
+  - The first test `getAllElementsButNth` is already active for you as an example
+- There are multiple unit tests testing edge cases and other expectations for each function to be completed
+- Active tests will be red until you complete the function
+- Once you fulfill the requirements for the tests, you will see green dots, hooray!
